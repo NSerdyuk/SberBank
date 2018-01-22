@@ -1,3 +1,4 @@
+import org.junit.AfterClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -36,8 +37,6 @@ public class BaseClass {
         field.clear();
         field.sendKeys(value);
     }
-    public void checkFillField(String value, WebElement element) {
-        assertEquals(value, element.getAttribute("value"));
-    }
+
 }
 
