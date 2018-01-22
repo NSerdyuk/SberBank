@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MakeRequest_2 extends BaseClass {
 
-    @FindBy(className = "l-header-title ng-binding")
+    @FindBy(xpath = "//h2[@ng-bind='prodTitle']")
     WebElement title;
 
     @FindBy(name = "insured0_surname")
@@ -55,6 +55,8 @@ public class MakeRequest_2 extends BaseClass {
 
     public MakeRequest_2(WebDriver driver) {
         PageFactory.initElements(driver, this);
+        (new WebDriverWait(driver, 20))
+                .until(ExpectedConditions.visibilityOf(title));
         this.driver = driver;
     }
 
@@ -135,6 +137,11 @@ public class MakeRequest_2 extends BaseClass {
     }
     public void setError(){
         Assert.assertTrue(error.getText().contains("Заполнены не все обязательные поля"));
+    }
+
+    public void setFemale(){
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", female);
+        female.click();
     }
 
 }

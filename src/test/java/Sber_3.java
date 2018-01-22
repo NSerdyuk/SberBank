@@ -21,6 +21,7 @@ public class Sber_3  extends BaseClass{
         makeRequest_2.fillField("Имя","Иван");
         makeRequest_2.fillField("Отчество","Иванович");
         makeRequest_2.fillField("Дата рождения","12041990");
+        makeRequest_2.setFemale();
         makeRequest_2.fillField("Серия паспорта","0000");
         makeRequest_2.fillField("Номер паспорта","000000");
         makeRequest_2.fillField("Дата выдачи","15012015");
@@ -28,4 +29,5 @@ public class Sber_3  extends BaseClass{
         makeRequest_2.setContinueButton();
         makeRequest_2.setError();
 
-        }}
+        }
+}
