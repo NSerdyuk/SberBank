@@ -1,10 +1,17 @@
-public class Sber_2 extends BaseClass{
+import Steps.BaseClass;
+import Pages.MainPage;
+import Pages.MakeRequest;
+import Pages.SelectPolicy;
+import org.junit.Ignore;
+
+public class Sber_2 extends BaseClass {
 
     MainPage mainPage;
     SelectPolicy issueApplication;
     MakeRequest makeRequest;
 
     @org.junit.Test
+    @Ignore
     public void Test() {
 
         mainPage= new MainPage(driver);
