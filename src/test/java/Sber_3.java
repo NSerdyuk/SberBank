@@ -11,7 +11,7 @@ public class Sber_3  extends BaseClass {
     MakeRequest_2 makeRequest_2;
 
     @org.junit.Test
-    @Ignore
+
     public void Test() {
 
         mainPage= new MainPage(driver);
